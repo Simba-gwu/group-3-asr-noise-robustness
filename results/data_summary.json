@@ -1,0 +1,62 @@
+{
+  "seed": 6312,
+  "sample_rate": 16000,
+  "max_duration_s": 30.0,
+  "snrs_db": [
+    20,
+    10,
+    0
+  ],
+  "librispeech": {
+    "dev": {
+      "n_utterances": 100,
+      "n_speakers": 40,
+      "total_duration_min": 12.69,
+      "mean_duration_s": 7.62,
+      "max_duration_s": 27.99
+    },
+    "test": {
+      "n_utterances": 300,
+      "n_speakers": 40,
+      "total_duration_min": 40.54,
+      "mean_duration_s": 8.11,
+      "max_duration_s": 28.27
+    }
+  },
+  "musan": {
+    "music/dev": {
+      "n_files": 210,
+      "hours": 13.19
+    },
+    "music/test": {
+      "n_files": 209,
+      "hours": 14.37
+    },
+    "noise/dev": {
+      "n_files": 465,
+      "hours": 2.98
+    },
+    "noise/test": {
+      "n_files": 465,
+      "hours": 3.24
+    },
+    "speech/dev": {
+      "n_files": 126,
+      "hours": 19.93
+    },
+    "speech/test": {
+      "n_files": 127,
+      "hours": 20.14
+    }
+  },
+  "mixtures": {
+    "n_files": 3600,
+    "n_rescaled_to_avoid_clipping": 224,
+    "n_looped_noise": 438,
+    "max_abs_snr_error_db": 0.0
+  },
+  "overlap_checks": {
+    "utterances_dev_test": 0,
+    "noise_files_dev_test": 0
+  }
+}
