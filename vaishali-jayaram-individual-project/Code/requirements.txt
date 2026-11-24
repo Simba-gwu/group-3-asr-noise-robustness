@@ -1,0 +1,4 @@
+numpy>=2.0
+pandas>=2.2
+soundfile>=0.13
+noisereduce>=3.0
