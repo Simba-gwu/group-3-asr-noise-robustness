@@ -62,3 +62,45 @@ that comparison belongs to the ASR evaluation stage.
 
 Note: The audio dataset and generated denoised audio are stored locally
 and are not committed to GitHub.
+
+## Reproducing the Complete Pipeline
+
+The project includes a setup script that automates dependency installation,
+dataset preparation, and audio denoising.
+
+### Requirements
+
+- Python 3.13 or compatible Python version
+- Approximately 12 GB for the original datasets, plus additional storage
+  for prepared and denoised audio
+- Internet connection for downloading LibriSpeech and MUSAN
+
+### Setup
+
+From the project root:
+
+    python3 -m venv asr-env
+    source asr-env/bin/activate
+    ./setup_pipeline.sh
+
+The script automatically:
+
+1. Installs dependencies from requirements.txt.
+2. Downloads LibriSpeech and MUSAN if the raw datasets are missing.
+3. Builds the prepared dataset using random seed 6312.
+4. Processes 400 clean files and 3,600 noisy mixtures.
+5. Saves denoised audio and metadata under data/denoised/.
+
+Existing datasets and complete denoised outputs are detected and skipped
+to avoid unnecessary downloads and processing.
+
+### Expected Results
+
+- 400 clean audio files
+- 3,600 noisy audio mixtures
+- 4,000 denoised WAV files
+- Metadata CSV containing 4,000 records
+
+The raw datasets and generated audio files are stored locally and are
+not committed to GitHub. Each team member can reproduce the pipeline
+by running the setup script.
